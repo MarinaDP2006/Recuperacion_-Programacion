@@ -1,0 +1,21 @@
+En JAVA, Iterable<T> es una interfaz que puede ser implementada por una clase de colección. El
+único método abstracto de dicha interfaz es public Iterator<T> iterator()
+
+Cualquier colección puede crear un objeto de tipo Iterator<T>. Este le proveerá una forma fácil
+de obtener uno a uno todos los objetos que posea.
+
+La interface Iterable<T> hace referencia a una colección de elementos que se puede recorrer,
+así de simple. Dicha interface solo necesita que implementemos un método para poder funcionar de forma
+correcta, este método es public Iterator<T> iterator()
+
+Iterator es una interfaz que puede ser implementada por una clase que implementa la interface Collection.
+
+● Principales métodos:
+→ next( ): retorna un objeto de tipo Object empezando por el primero y establece el iterator
+para que retorne el próximo objeto en la siguiente llamada a este mismo método. Si no
+existe próximo objeto y se invoca next() se produce una NoSuchElementException.
+→ hasNext( ): retorna true si existe un próximo objeto a retornar a través de la llamada a la
+función next().
+→ remove( ): Elimina el último objeto retornado por la función next(). Si no se invoca next()
+antes de remove() o se invoca dos veces después de next(), se produce una
+IllegalStateException.
