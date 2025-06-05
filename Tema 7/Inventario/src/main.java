@@ -28,7 +28,7 @@ public class InventarioProductos {
             System.out.print("Seleccione una opción: ");
             
             int opcion = scanner.nextInt();
-            scanner.nextLine(); // Limpiar buffer
+            scanner.nextLine();
             
             switch (opcion) {
                 case 1:
