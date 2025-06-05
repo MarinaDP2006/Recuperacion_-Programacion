@@ -1,2 +1,2 @@
 # Recuperacion_-Programacion
-Repositorio de ejercicios, proyectos, de la recuperación de Programación
+Repositorio de apuntes, ejercicios y proyectos, de la recuperación de Programación
