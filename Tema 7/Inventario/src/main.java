@@ -102,13 +102,43 @@ private void mostrarCantidadProducto() {
     }
 }
 
-   private void mostrarStockTotal() {
+    private void mostrarStockTotal() {
+        int total = 0;
+        for (int cantidad : inventario.values()) { 
+            total += cantidad; // Suma las cantidades de todos los productos y muestra el total
+        }
+        System.out.println("Stock total del inventario: " + total + " unidades.");
     }
 
     private void eliminarProducto() {
-    }
-
-    private void mostrarProductoMayorStock() {
+        System.out.print("Ingrese el nombre del producto a eliminar: ");
+        String nombre = scanner.nextLine();
+            // Elimina un producto del inventario
+        if (inventario.remove(nombre) != null) {
+            System.out.println("Producto " + nombre + " eliminado del inventario.");
+        } else {
+                 // Solicita el nombre del producto y lo elimina si existe
+            System.out.println("El producto no existe en el inventario.");
         }
     }
+
+    // Muestra el producto con la mayor cantidad en stock
+    private void mostrarProductoMayorStock() {
+        if (inventario.isEmpty()) {
+            System.out.println("El inventario está vacío.");
+            return;
+        }
+        
+        String productoMayor = "";
+        int maxStock = Integer.MIN_VALUE;
+      //Recorre todo el inventario para encontrar el producto con mayor stock
+        for (Map.Entry<String, Integer> entry : inventario.entrySet()) {
+            if (entry.getValue() > maxStock) {
+                maxStock = entry.getValue();
+                productoMayor = entry.getKey();
+            }
+        }
+        System.out.println("Producto con mayor stock: " + productoMayor + " (" + maxStock + " unidades)");
+    }
 }
+
