@@ -3,7 +3,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class InventarioProductos {
-      public static void main(String[] args) {
+	public static void main(String[] args) {
         
     private HashMap<String, Integer> inventario;
     private Scanner scanner;
