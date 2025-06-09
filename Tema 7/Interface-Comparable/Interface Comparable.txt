@@ -1,0 +1,5 @@
+Comparadores
+Sirven para ordenar objetos:
+- Comparable&lt;T&gt;: Se implementa en la clase (compareTo).
+- Comparator&lt;T&gt;: Se define externamente.
+Comparator&lt;Persona&gt; porNombre = (a, b) -&gt; a.nombre.compareTo(b.nombre);
