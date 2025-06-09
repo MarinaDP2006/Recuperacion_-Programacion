@@ -1,0 +1,28 @@
+Inventario de productos por categoría
+Este ejercicio tiene como objetivo trabajar con estructuras de datos en Java, específicamente `Map`
+y `HashMap`, aplicados a un caso práctico de inventario, utilizando una estructura más simple.
+
+Para ello se propone el siguiente ejercicio:
+Crea una aplicación que gestione un inventario de productos. Para ello, utiliza un HashMap<String,
+Integer>, donde la clave es el nombre del producto y el valor es la cantidad de unidades en stock.
+
+Requisitos y funcionalidades que se piden
+  1. Añadir un nuevo producto con su cantidad inicial.
+  2. Actualizar el stock de un producto (sumar o restar unidades).
+  3. Mostrar la cantidad disponible de un producto concreto.
+  4. Mostrar el stock total del inventario.
+  5. Eliminar un producto del inventario.
+  6. Mostrar el producto con mayor stock.
+
+Guía orientativa de métodos a emplear
+1. Añadir producto: containsKey(), put()
+
+2. Actualizar stock: getOrDefault(), put(), containsKey()
+
+3. Mostrar cantidad de un producto: get(), containsKey()
+
+4. Mostrar stock total: values(), for-each
+
+5. Eliminar producto: remove()
+
+6. Mostrar producto con más stock: entrySet(), comparación de valores
