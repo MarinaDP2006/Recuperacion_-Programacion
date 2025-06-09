@@ -42,7 +42,7 @@ class Alumno implements Comparable<Alumno> {
     }
 }
 
-public class Main {
+public class MAIN_App {
     public static void main(String[] args) {
         // Crear lista de 5 alumnos con nombres y notas de ejemplo
         List<Alumno> alumnos = new ArrayList<>();
