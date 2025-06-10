@@ -107,7 +107,6 @@ public class NombreComparator implements Comparator<Object> {
 }
 
 // Implementacion: 
-
     public static void main(String[] args) {
         // Lista de alumnos y docentes
         List<Object> personas = new ArrayList<>();
@@ -121,7 +120,7 @@ public class NombreComparator implements Comparator<Object> {
         System.out.println("=== Lista original ===");
         imprimirLista(personas);
 
-        // Ordenar por nombre usando un Comparator
+        // Ordenar por nombre con Comparator
         Collections.sort(personas, new Comparator<Object>() {
             @Override
             public int compare(Object o1, Object o2) {
