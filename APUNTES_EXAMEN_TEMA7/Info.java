@@ -26,19 +26,39 @@ Iterator/Iterable (Interfaces)
 - Iterable: Permite que una clase sea recorrible con for-each (debe implementar iterator()).
 - Iterator: Proporciona métodos para recorrer una colección (hasNext(), next(), remove()).
 */
-
-// Ejemplo custom: Iterador para rangos de números
-class RangoNumeros implements Iterable<Integer> {
-    private int inicio, fin;
-    
-    public Iterator<Integer> iterator() {
-        return new Iterator<>() {
-            private int actual = inicio;
-            public boolean hasNext() { return actual <= fin; }
-            public Integer next() { return actual++; }
-        };
+    public static void main(String[] args) {
+        // Crear grupo de personas
+        GrupoPersonas grupo = new GrupoPersonas();
+        grupo.agregarPersona(new Persona("María", 30));
+        grupo.agregarPersona(new Persona("Juan", 25));
+        grupo.agregarPersona(new Persona("Carlos", 20));
+        grupo.agregarPersona(new Persona("Ana", 35));
+        
+        System.out.println("=== Iteración básica ===");
+        for (Persona p : grupo) {
+            System.out.println(p);
+        }
+        
+        System.out.println("\n=== Ordenado por edad ===");
+        grupo.ordenarPorEdad();
+        grupo.forEach(System.out::println); // forEach
+        
+        System.out.println("\n=== Ordenado por nombre ===");
+        grupo.ordenarPorNombre();
+        Iterator<Persona> it = grupo.iterator();
+        while (it.hasNext()) {
+            Persona p = it.next();
+            System.out.println(p);
+            if (p.nombre.equals("Juan")) {
+                it.remove(); // Eliminar a Juan durante la iteración
+            }
+        }
+        
+        System.out.println("\n=== Después de eliminar a Juan ===");
+        grupo.forEach(System.out::println);
     }
 }
+
 /*
 Comparator y Comparable
 - Comparable (Interfaz): Define un orden natural para los objetos de una clase. La clase implementa compareTo().
@@ -58,18 +78,37 @@ Collections.sort(productos); // Ordena por precio
 /*
 - Comparator (Interfaz): Para qué sirve: Permite definir múltiples criterios de ordenación externos a la clase.
 */
-Comparator<Producto> porNombre = Comparator.comparing(p -> p.nombre);
-Comparator<Producto> porPrecioDesc = (p1, p2) -> Double.compare(p2.precio, p1.precio);
-// Uso:
-productos.sort(porPrecioDesc);
+public class EjemploComparacion {
+    public static void main(String[] args) {
+        List<Persona> personas = Arrays.asList(
+            new Persona("Juan", 25),
+            new Persona("María", 30),
+            new Persona("Carlos", 20)
+        );
+        
+        System.out.println("Lista original:");
+        personas.forEach(System.out::println);
+        
+        // Orden natural (Comparable - por edad)
+        Collections.sort(personas);
+        System.out.println("\nOrdenado por edad (Comparable):");
+        personas.forEach(System.out::println);
+        
+        // Orden por nombre (Comparator)
+        Comparator<Persona> porNombre = Comparator.comparing(p -> p.nombre);
+        personas.sort(porNombre);
+        System.out.println("\nOrdenado por nombre (Comparator):");
+        personas.forEach(System.out::println);
+    }
+}
 
 /*
 Programación Funcional
 - Stream: Permite operaciones (filtrado, mapeo, reducción)
-.filter: Elimina elementos que no cumplen condición.
-.map: Transforma cada elemento.
-.reuce: Agrega elementos.
-.collect: Coloca en lista el resultado.
+    .filter: Elimina elementos que no cumplen condición.
+    .map: Transforma cada elemento.
+    .reuce: Agrega elementos.
+    .collect: Coloca en lista el resultado.
 */
 
 // Ejemplo:
