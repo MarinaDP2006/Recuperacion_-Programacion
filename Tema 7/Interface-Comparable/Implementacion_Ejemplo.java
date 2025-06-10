@@ -120,28 +120,13 @@ public class Main {
         personas.add(new Docente("David Fernández", 3, 2200.0));
         personas.add(new Alumno("Elena Torres", "A13579", 21));
 
-        // Mostrar lista sin ordenar
+        // Lista sin ordenar
         System.out.println("=== Lista original (sin ordenar) ===");
         imprimirLista(personas);
-
-        // Ordenar usando el NombreComparator
         Collections.sort(personas));
 
-        // Mostrar lista ordenada
+        //  Lista ordenada
         System.out.println("\n=== Lista ordenada por nombre ===");
         imprimirLista(personas);
-    }
-
-    private static void imprimirLista(List<Object> lista) {
-        for (Object obj : lista) {
-            if (obj instanceof Alumno) {
-                Alumno a = (Alumno) obj;
-                System.out.println("ALUMNO: " + a.getNombre() + " | NIA: " + a.getNia() + " | Edad: " + a.getEdad());
-            } else if (obj instanceof Docente) {
-                Docente d = (Docente) obj;
-                System.out.println("DOCENTE: " + d.getNombre() + " | Permanencia: " + d.getPermanencia() + 
-                                  " años | Salario: $" + d.getSalario());
-            }
-        }
     }
 }
