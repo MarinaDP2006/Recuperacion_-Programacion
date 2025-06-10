@@ -1,0 +1,23 @@
+- Datos de archivo: java.io, clase File, 
+- Datos de BD
+
+Introducción:
+- Librerías de datos (java.io y java.nio)
+-  Clase File de java.io, trabaja con ficheros, archivos, diectorios, imaágenes...etc.
+FILE: ¿La clase File te genera un fichero o y a puede estar creado? (TAREA)
+  - Pág 10 --> métodos y sus usos
+  - Pág 11 - 15 --> ejemplos File
+- Fichero texto: FileWritter (escribir en archivos) FileReader (leer archivos, su contenido) 
+    - Pág 22 --> métodos y sus usos 
+    - Pág 23-24 --> ejemplos Writter y Reader
+
+- Flujos y Streams: Acceso a contenido de archivos con flujos de entrada (InputStreams lee contenido de fichero) 
+y flujos de salida (OutputSteams escribe el contenido de ficheros)
+
+- BufferedReader y BufferedWriter se utilizan para la lectura y escritura de texto del package java.io.
+  - Pág 34 --> métodos y uso
+  - Pág 35 y 36 --> ejercicio
+
+- Conexion a Base de Datos (Conectar JAVA con MySQL: Pág 78)
+  - Conectar (Pág 80)
+  - Consultas ejemplos--> Pág 82 - 85)
