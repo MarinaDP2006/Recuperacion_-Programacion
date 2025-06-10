@@ -53,13 +53,15 @@ class Producto implements Comparable<Producto> {
         return Double.compare(this.precio, otro.precio);
     }
 }
-// Uso: Collections.sort(productos); // Ordena por precio
+// Uso: 
+Collections.sort(productos); // Ordena por precio
 /*
 - Comparator (Interfaz): Para qué sirve: Permite definir múltiples criterios de ordenación externos a la clase.
 */
 Comparator<Producto> porNombre = Comparator.comparing(p -> p.nombre);
 Comparator<Producto> porPrecioDesc = (p1, p2) -> Double.compare(p2.precio, p1.precio);
-// Uso: productos.sort(porPrecioDesc);
+// Uso:
+productos.sort(porPrecioDesc);
 
 /*
 Programación Funcional
