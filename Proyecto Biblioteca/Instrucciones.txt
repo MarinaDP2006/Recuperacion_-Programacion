@@ -7,11 +7,11 @@ GestionarBiblioteca
 |_____ Conexion 
            |___ (ConexBD)
 |_____ DAO 
-            |_____ (AutorDAO)
-            |_____ (LibroDAO)
+            |_____ (Autor)
+            |_____ (Libro)
 |______ DTO 
-             |_____ (AutorDTO)
-             |_____ (LibroDTO)
+             |_____ (AutorDTO) -- Métodos sin static (fundamental: private void...)
+             |_____ (LibroDTO) -- Métodos sin static (fundamental: private void...)
 
 IMPORTANTE:
 - Crear nuevos AutorDAO y Libro DAO (import Dao y Dto)
@@ -19,3 +19,15 @@ IMPORTANTE:
 - Al importar los Dao y Dto, poner autor.metodos y libro.metodos para que funcionen los CRUD
 
 INSTRUCCIONES:
+Implementa una aplicación Java para gestionar una biblioteca, tenéis que implementar un CRUD para Autor y otro para Libros. El Main puede tener un menú similar a este:
+System.out.println("\n=== Gestión de Biblioteca ===");
+            System.out.println("1. Insertar autor");--métodos de autor
+            System.out.println("2. Ver autores"); -- llamada a autores
+            System.out.println("3. Insertar libro"); --métodos de libro
+            System.out.println("4. Ver libros"); -- llamada a libros
+            System.out.println("5. Modificar título de un libro"); --métodos de libro
+            System.out.println("6. Eliminar un libro"); --métodos de libro
+            System.out.println("0. Salir");
+            System.out.print("Seleccione opción: ");
+            opcion = sc.nextInt();
+            sc.nextLine();
