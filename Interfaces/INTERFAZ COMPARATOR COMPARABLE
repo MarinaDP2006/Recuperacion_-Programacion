@@ -1,6 +1,0 @@
-Comparadores
-Sirven para ordenar objetos:
-- Comparable <TIPO>: Se implementa en la clase (compareTo).
-- Comparator<TIPO> : Se define externamente.
-
-Comparator<Persona> porNombre = (a, b) -&gt; a.nombre.compareTo(b.nombre);
