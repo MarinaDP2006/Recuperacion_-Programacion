@@ -1,4 +1,5 @@
-/* Para conectar con una BD en MySQL debemos realizar la conexión a través del método
+/* 
+Para conectar con una BD en MySQL debemos realizar la conexión a través del método
 getConnection de la clase DriverManager. El método recibe 3 parámetros:
   ● Usuario
   ● Contraseña
@@ -36,4 +37,26 @@ ResultSet resultado = instruccion.executeQuery(query); // Resultado de la consul
   } catch (SQLException e) { 
     System.out.println(e); 
 }
+
+// Ejemplo INSERT
+try {
+  String user = "root";
+  String pwd = "";
+  String url = "jdbc:MySQL://localhost/agenda";
+
+  Connection conex = DriverManager.getConnection(url,user,pwd);
+  String query = "INSERT INTO contacto VALUES ('pepe', 'pepe@pepe.com')"; // Consulta
+
+  Statement instruccion = (Statement)conex.createStatement();
+  instruccion.executeUpdate(query); // Ejecución INSERT
+
+} catch (SQLException e) { 
+  System.out.println(e); 
+}
+
+
+
+
+
+
 
