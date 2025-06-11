@@ -1,0 +1,15 @@
+Gestión Biblioteca: Autor (CRUD) y Libro (CRUD)
+|_____ DAO 
+            |_____ (AutorDAO)
+            |_____ (LibroDAO)
+|______ DTO 
+             |_____ (AutorDTO)
+             |_____ (LibroDTO)
+|_____ Conexion 
+           |___ (ConexBD)
+|_____ Main 
+           |___ (AppBiblioteca)
+
+- Crear nuevos AutorDAO y Libro DAO (import Dao y Dto)
+- Importar la conexión (import connection, sql...etc)
+- Al importar los Dao y Dto, poner autor.metodos y libro.metodos para que funcionen los CRUD
