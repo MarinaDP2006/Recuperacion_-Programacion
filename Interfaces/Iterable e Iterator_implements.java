@@ -14,7 +14,6 @@ public Iterator<Alumno> iterator() {
 }
 
 /* Ejemplo de clase que implementa la interfaz Iterable */
-
 public class Alumno {
   private String nombre;
   private String nia;
