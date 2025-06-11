@@ -3,7 +3,7 @@ Para conectar con una BD en MySQL debemos realizar la conexión a través del m�
 getConnection de la clase DriverManager. El método recibe 3 parámetros:
   ● Usuario
   ● Contraseña
-  ● URL de nuestra BD a través del conector
+  ● URL de nuestra BD a través del conector MySQL CONECTOR LIBRERIA
 */
   try {
   String user = "root";
@@ -54,9 +54,18 @@ try {
   System.out.println(e); 
 }
 
+// Ejemplo con DELETE
+try {
+  String user = "root";
+  String pwd = "";
+  String url = "jdbc:MySQL://localhost/agenda";
 
+  Connection conex = DriverManager.getConnection(url,user,pwd);
+  String query = "INSERT INTO contacto VALUES ('pepe', 'pepe@pepe.com')";
 
+  Statement instruccion = (Statement)conex.createStatement();
+  instruccion.executeUpdate(query);
 
-
-
-
+} catch (SQLException e) { 
+  System.out.println(e); 
+}
