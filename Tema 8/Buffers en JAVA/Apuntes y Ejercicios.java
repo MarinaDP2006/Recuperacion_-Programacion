@@ -1,10 +1,10 @@
 Métodos BufferedWriter y BufferedReader --> Pág 35
 
-- Ejercicio BufferedWriter: 
+/* Ejercicio BufferedWriter: 
 Crea un método que reciba el nombre de un archivo, y un entero. El método deberá crear el
 archivo y escribir ‘n’ líneas dentro. Cada línea deberá tener escrito “Esta es la línea n”,
 sustituyendo ‘n’ por el número de la línea. Utiliza un buffer para realizar la escritura.
-
+*/
 // MAIN:
 public static void main(String args[]) {
   Syste.out.print("Archivo de 14 lineas") // Nombre
@@ -29,10 +29,10 @@ System.out.println(nombreFichero + " creado con " + numLineas + " líneas");
   }
 }
 
-- Ejercicio BufferedReader:
+/* Ejercicio BufferedReader:
 Crea un método que reciba un archivo y devuelva la cantidad de palabras de dicho archivo.
 Utiliza un buffer para realizar la lectura.
-
+*/
 public static void contarPalabras(String nombreArchivo) {
     try {
     int palabras = 0;
